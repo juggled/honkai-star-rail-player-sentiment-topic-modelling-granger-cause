@@ -10,7 +10,7 @@ Modelling the Impact of Feedback and Customer Sentiment on Revenue
 ## Steps to follow
 1. Clone repository
 ```bash
-git clone [insert url]
+git clone https://github.com/juggled/honkai-star-rail-player-sentiment-topic-modelling-granger-cause.git
 ```
 2. Install requirements
 ```bash
