@@ -40,7 +40,8 @@ python src/granger_graph.py # Quantify the above
 ---
 ## Explanation of files
 ### File directory
-📦HSR
+``` bash
+📦honkai-star-rail-player-sentiment-topic-modelling-granger-cause
  ┣ 📂.git
  ┃ ┣ 📂hooks
  ┃ ┃ ┣ 📜applypatch-msg.sample
@@ -105,6 +106,7 @@ python src/granger_graph.py # Quantify the above
  ┣ 📜.gitignore
  ┣ 📜README.md
  ┗ 📜requirements.txt
+ ```
 ### Pre-included data
 - All the data included is data I processed.
 - data/01-raw
