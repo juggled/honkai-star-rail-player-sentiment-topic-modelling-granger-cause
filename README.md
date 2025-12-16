@@ -16,13 +16,7 @@ git clone https://github.com/juggled/honkai-star-rail-player-sentiment-topic-mod
 ```bash
 pip3 install -r requirements.txt
 ```
-3. There are five files.
-  a. The first file to run is src/api_scrape_clean_sentiment.py to grab all the reviews from Google Play Store
-  b. The second file to run is src/model.py
-  c. The third file to run is src/merge_reviews_revenue.py
-    c.i. Data is already modelled and trained, so you may wish to skip these if you only want to preview the data
-  d. The fourth file to run is granger_causality_tests.py
-  e. The fifth file to run is granger_graph.py
+3. There are five files. The first file to run is src/api_scrape_clean_sentiment.py to grab all the reviews from Google Play Store. The second file to run is src/model.py . The third file to run is src/merge_reviews_revenue.py . Data is already modelled and trained, so you may wish to skip these if you only want to preview the data. The fourth file to run is granger_causality_tests.py . The fifth file to run is granger_graph.py .
 
 4. Run above said files in the directory outside of src.
 ```bash
@@ -42,6 +36,7 @@ python src/granger_causality_tests.py # Deduce the impact of topics on revenue
 ```
 ```bash
 python src/granger_graph.py # Quantify the above
+```
 ---
 ## Explanation of files
 ### File directory
