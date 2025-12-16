@@ -150,7 +150,7 @@ python src/granger_graph.py # Quantify the above
     - StoryDialogue_3_lag.png
         - Story/Dialogue sentiment multiplied by feedback count, with a lag of 3
 ### Python files
-- The following three files will give you a user-level menu to select the operations you wish to operate. 
+- The following three files will give you a user-level menu to select the operations you wish to operate
 - src/api_scrape_clean_sentiment.py
     - This file will get reviews from Google Play Store and save to reviews.csv
     - You can then clean the file and analyze the sentiment
@@ -162,6 +162,7 @@ python src/granger_graph.py # Quantify the above
     - The final part of the code will transform your data from reviews_sentiment.csv and save them into three figures as well as CSVs
 - src/merge_reviews_revenue.py
     - This merges the revenue and reviews to be used in Power BI
+- The following two files do not give you a user-level menu
 - src/granger_causality_tests.py
     - Test time lag via Granger causality tests
 - src/granger_graph.py
