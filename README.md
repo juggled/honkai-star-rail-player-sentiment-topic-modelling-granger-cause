@@ -10,19 +10,13 @@ Modelling the Impact of Feedback and Customer Sentiment on Revenue
 ## Steps to follow
 1. Clone repository
 ```bash
-git clone [insert url]
+git clone https://github.com/juggled/honkai-star-rail-player-sentiment-topic-modelling-granger-cause.git
 ```
 2. Install requirements
 ```bash
 pip3 install -r requirements.txt
 ```
-3. There are five files.
-  a. The first file to run is src/api_scrape_clean_sentiment.py to grab all the reviews from Google Play Store
-  b. The second file to run is src/model.py
-  c. The third file to run is src/merge_reviews_revenue.py
-    c.i. Data is already modelled and trained, so you may wish to skip these if you only want to preview the data
-  d. The fourth file to run is granger_causality_tests.py
-  e. The fifth file to run is granger_graph.py
+3. There are five files. The first file to run is src/api_scrape_clean_sentiment.py to grab all the reviews from Google Play Store. The second file to run is src/model.py . The third file to run is src/merge_reviews_revenue.py . Data is already modelled and trained, so you may wish to skip these if you only want to preview the data. The fourth file to run is granger_causality_tests.py . The fifth file to run is granger_graph.py .
 
 4. Run above said files in the directory outside of src.
 ```bash
@@ -42,10 +36,12 @@ python src/granger_causality_tests.py # Deduce the impact of topics on revenue
 ```
 ```bash
 python src/granger_graph.py # Quantify the above
+```
 ---
 ## Explanation of files
 ### File directory
-📦HSR
+``` bash
+📦honkai-star-rail-player-sentiment-topic-modelling-granger-cause
  ┣ 📂.git
  ┃ ┣ 📂hooks
  ┃ ┃ ┣ 📜applypatch-msg.sample
@@ -110,6 +106,7 @@ python src/granger_graph.py # Quantify the above
  ┣ 📜.gitignore
  ┣ 📜README.md
  ┗ 📜requirements.txt
+ ```
 ### Pre-included data
 - All the data included is data I processed.
 - data/01-raw
@@ -129,8 +126,11 @@ python src/granger_graph.py # Quantify the above
     - merged_reviews_revenue.csv
         - A CSV created via a SQL statement to merge the topics, sentiment and revenue together via src/merge_reviews_revenue.py
     - granger.xlsx
+        - An Excel file to contain the p-values and f-values from Granger Causality tests with time lag
     - date_revenue_topic_correlation_sentimentxfeedback__revenue_change_trend.csv
+        - Un-aggregated percentage and absolute change
     - correlation_sentimentxfeedback__revenue_median_pct_change_trend.csv
+        - Aggregated percentage and absolute change
 - data/03-fig
     - These are all HTML files created by BERTopic using Plotly
     - intertopic_distance_map.html
@@ -163,7 +163,9 @@ python src/granger_graph.py # Quantify the above
 - src/merge_reviews_revenue.py
     - This merges the revenue and reviews to be used in Power BI
 - src/granger_causality_tests.py
+    - Test time lag via Granger causality tests
 - src/granger_graph.py
+    - Graph and get data for analysis
 ### Other
 - READMD.md
     - The current file
