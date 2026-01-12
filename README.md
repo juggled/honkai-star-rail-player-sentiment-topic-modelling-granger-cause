@@ -152,6 +152,8 @@ python src/granger_graph.py # Quantify the above
         - Power creep sentiment multiplied by feedback count, with a lag of 2
     - StoryDialogue_3_lag.png
         - Story/Dialogue sentiment multiplied by feedback count, with a lag of 3
+    - wordcloud_reviews.png
+        - Word cloud of the topics from reviews
 ### Python files
 - The following three files will give you a user-level menu to select the operations you wish to operate. 
 - src/api_scrape_clean_sentiment.py
