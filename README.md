@@ -37,6 +37,7 @@ python src/granger_causality_tests.py # Deduce the impact of topics on revenue
 ```bash
 python src/granger_graph.py # Quantify the above
 ```
+5. To see a word cloud of the reviews, please see src/wordcloud_reviews.ipynb and run it. Alternative, see wordcloud_reviews.png in data/03-fig.
 ---
 ## Explanation of files
 ### File directory
@@ -95,14 +96,16 @@ python src/granger_graph.py # Quantify the above
  ┃ ┃ ┣ 📜Power Creep_2_lag.png
  ┃ ┃ ┣ 📜StoryDialogue_3_lag.png
  ┃ ┃ ┣ 📜topics_over_time.html
- ┃ ┃ ┗ 📜topic_word_score.html
+ ┃ ┃ ┣ 📜topic_word_score.html
+ ┃ ┃ ┗ 📜wordcloud_reviews.png
  ┣ 📂insights # Insights written here are removed and stored elsewhere
  ┣ 📂src
  ┃ ┣ 📜api_scrape_clean_sentiment.py
  ┃ ┣ 📜granger_causality_tests.py
  ┃ ┣ 📜granger_graph.py
  ┃ ┣ 📜merge_reviews_revenue.py
- ┃ ┗ 📜model.py
+ ┃ ┣ 📜model.py
+ ┃ ┗ 📜wordcloud_reviews.ipynb
  ┣ 📜.gitignore
  ┣ 📜README.md
  ┗ 📜requirements.txt
@@ -150,7 +153,7 @@ python src/granger_graph.py # Quantify the above
     - StoryDialogue_3_lag.png
         - Story/Dialogue sentiment multiplied by feedback count, with a lag of 3
 ### Python files
-- The following three files will give you a user-level menu to select the operations you wish to operate
+- The following three files will give you a user-level menu to select the operations you wish to operate. 
 - src/api_scrape_clean_sentiment.py
     - This file will get reviews from Google Play Store and save to reviews.csv
     - You can then clean the file and analyze the sentiment
@@ -167,6 +170,8 @@ python src/granger_graph.py # Quantify the above
     - Test time lag via Granger causality tests
 - src/granger_graph.py
     - Graph and get data for analysis
+- src/wordcloud_reviews.ipynb
+    - Word cloud of topics
 ### Other
 - READMD.md
     - The current file
